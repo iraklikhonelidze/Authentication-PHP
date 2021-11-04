@@ -16,6 +16,7 @@ session_start();
 		//something was posted
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
+		$new_password = md5($password.$user_name);
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
@@ -31,7 +32,7 @@ session_start();
 
 					$user_data = mysqli_fetch_assoc($result);
 					
-					if($user_data['password'] === $password)
+					if($user_data['password'] === $new_password)
 					{
 
 						$_SESSION['user_id'] = $user_data['user_id'];
