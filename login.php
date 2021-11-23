@@ -102,5 +102,6 @@ session_start();
 			<a href="signup.php" class=btn-dark>Register</a><br><br>
 		</form>
 	</div>
-</body>
-</html>
+<?php
+include "includes/footer.php"
+?>

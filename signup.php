@@ -85,5 +85,6 @@ session_start();
 			<a href="login.php" class="btn-dark">Already registered? Log In</a><br><br>
 		</form>
 	</div>
-</body>
-</html>
+<?php
+include "includes/footer.php"
+?>
